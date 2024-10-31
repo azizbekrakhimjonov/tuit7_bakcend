@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-center mb-4">Malumot</h2>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nomi</th>
+      <th>Fakultetlar</th>
+      <th>Sigimi</th>
+      <th>Ballar</th>
+      <th>Reyting</th>
+      <th>Konktrakt</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for malumotlar in malumotlar %}
+    <tr>
+      <td>{{ malumotlar.universitet }}</td>
+      <td>{{ malumotlar.fakultet }}</td>
+      <td>{{ malumotlar.sigimi }}</td>
+      <td>{{ malumotlar.ballar }}</td>
+      <td>{{ malumotlar.reyting }}</td>
+      <td>{{ malumotlar.konktrakt }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
